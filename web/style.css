@@ -1,0 +1,103 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 90px;
+  height: 90px;
+  display: block;
+  flex: 0 0 auto;
+  position: relative;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+}
+
+.loader.is-visible {
+  opacity: 1;
+}
+
+.circular {
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+.item-list {
+  width: 1024px;
+  max-width: 100%;
+  padding: 0 15px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transform:translate3d(0,70px,0);
+  opacity: 0;
+  transition:all 0.3s ease;
+}
+
+.item-list.is-visible {
+	opacity:1;
+	transform:translate3d(0, 0, 0);
+}
+
+
+.list-item {
+  display: inline-flex;
+}
+
+.list-item--image {
+  height: 375px;
+  width: 250px;
+  flex: 0 0 auto;
+}
+
+.list-item--meta {
+	flex: 1 1 auto;	
+}
+
+.list-item--meta--price {
+	text-align:center;
+	padding:10px;
+	font-size:16px;
+	color:#000;
+}
