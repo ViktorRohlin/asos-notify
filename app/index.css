@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  color: #41474C;
+  position: relative;
+  body: 100vh;
+  font-family: sans-serif;
+}
+
+h1, p {
+  margin: 0;
+  line-hight: 1;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 12px;
+  color: #8E939B;
+}
+p span {
+  color: #2855FF;
+  opacity: 0.8;
+}
+
+.time-ago {
+  display: inline-block;
+  cursor: default;
+}
+.time-ago:hover p, .time-ago:hover p span {
+  color: transparent;
+}
+.time-ago:hover p:before {
+  color: #2855FF;
+  opacity: 0.8;
+}
+.time-ago p:before {
+  content: "Update Now";
+  cursor: default;
+  height: 12px;
+  display: block;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0px 1px;
+  padding-left: 14px;
+  opacity: 0;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iOXB4IiBoZWlnaHQ9IjEwcHgiIHZpZXdCb3g9IjAgMCA5IDEwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPlNoYXBlPC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+ICAgIDxkZWZzPjwvZGVmcz4gICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8cGF0aCBkPSJNNS45MjEwNzE2OCwzLjYxNzU3Mzc0IEw5LDMuNjE3NTczNzQgTDksMC41NTQ2MzgzOTQgTDcuOTM5NDI3NjEsMS42MTQyOTYyMiBDNy44NTkwMjAyMiwxLjUyMDk5NDQ5IDcuNzcxMzg5MTgsMS40Mjk5MzEwNyA3LjY4Mzg3NjU2LDEuMzQxMzQxNTYgQzUuOTE0Njc2OTgsLTAuNDA4NzcyNTc3IDMuMDYwMDM2NzUsLTAuMzk2NzU2NDQ2IDEuMzA3ODg5NjksMS4zNjc5NjU1MyBDLTAuNDQ2NTA3MzQ2LDMuMTMyNjg3NTEgLTAuNDM0MzEwMDUzLDUuOTgyMDQyMDIgMS4zMzQ4ODk1Myw3LjczMTkyMDU0IEMzLjEwMTk1NzU0LDkuNDgxNzk5MDYgNS45NTY1OTc3OCw5LjQ2OTkwMDc0IDcuNzEwNzU3OTgsNy43MDUwNjA5NSBDNy43MTA3NTc5OCw3LjcwNTA2MDk1IDguMjk2NzAxNzIsNy4wMTQwMTU2MiA4LjQ5MDY3NDIsNi42NDUyODUzMiBMNy41MTYxOTMzOSw2LjIxODEyMzY1IEM3LjM3MzYxNTMzLDYuNDY5Mjg0MzUgNi45NTYzMDIxMiw2Ljk1ODQxMTU2IDYuOTU2MzAyMTIsNi45NTg0MTE1NiBDNS42MTQ4MzY3Myw4LjMwOTE2NjA1IDMuNDMzNzcxMjgsOC4zMTgyMzcwNSAyLjA4MzA2OTExLDYuOTc4NzkxODYgQzAuNzMwMTE2OTUzLDUuNjQyMTc0IDAuNzIwODgwMTY4LDMuNDYyNzc3NyAyLjA2MjQ2Mzk3LDIuMTE0NzMyNzMgQzMuNDAxNjc5MzcsMC43NjM5NzgyNDQgNS41ODI4NjMyNSwwLjc1NDc4OTQzOCA2LjkzNTgxNTQsMi4wOTQyMzQ2MiBDNy4wMjU2OTY0MywyLjE4MjcwNjMzIDcuMTA4MzUzODEsMi4yNzYyNDM2NyA3LjE4NjUxMTIyLDIuMzcyMDE5MyBMNS45MjEwNzE2OCwzLjYxNzU3Mzc0IEw1LjkyMTA3MTY4LDMuNjE3NTczNzQgWiIgaWQ9IlNoYXBlIiBmaWxsPSIjMjg1NUZGIj48L3BhdGg+ICAgIDwvZz48L3N2Zz4=);
+}
+
+.window {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.2);
+}
+.window header {
+  position: fixed;
+  border-radius: 5px 5px 0 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  background-color: #EDEDED;
+  border-bottom: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  padding: 12px;
+}
+.window header .settings {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.window header .settings:hover path {
+  fill: #2855FF;
+}
+.window .items {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  padding-top: 62px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  overflow: scroll;
+}
+.window .items::-webkit-scrollbar {
+  display: none;
+}
+.window .items article {
+  width: calc(50% - 12px);
+  height: 300px;
+  margin-top: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.window .items article img {
+  border-radius: 3px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 265px;
+}
+.window .items article p {
+  font-size: 14px;
+  color: #41474C;
+}
+.window .items article .info {
+  position: relative;
+}
+.window .items article .price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+}
+.window .items article .status {
+  font-size: 10px;
+  color: #8E939B;
+}
+.window .items article .status.new {
+  color: #20B226;
+  font-weight: bold;
+  text-transform: uppercase;
+}
